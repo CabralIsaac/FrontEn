@@ -1,0 +1,20 @@
+   .Logo {
+        width: 50px;
+        height: 40px;
+        display: flex;
+    }
+    .Banner {
+        width: 1700px;
+        height: 600px;
+    }
+    .Instagram{
+        width: 50px;
+        height: 40px;
+        position: absolute; right: 120px; 
+        display: flex;
+    }
+    .Usuario {
+        width: 280px;
+        height: 280px;
+        position: absolute; top: 580px;
+    }
