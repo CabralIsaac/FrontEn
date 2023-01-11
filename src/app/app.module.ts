@@ -7,7 +7,7 @@ import { EncabezadoComponent } from './componentes/encabezado/encabezado.compone
 import { AcercaDeComponent } from './componentes/acerca-de/acerca-de.component';
 import { ExperienciaComponent } from './componentes/experiencia/experiencia.component';
 import { EducacionComponent } from './componentes/educacion/educacion.component';
-import { HardYSoftSkillsComponent } from './componentes/hard-y-soft-skills/hard-y-soft-skills.component';
+
 import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
 import { BannerComponent } from './componentes/banner/banner.component';
 import { UsuarioComponent } from './componentes/usuario/usuario.component';
@@ -22,6 +22,13 @@ import { NewExperienciaComponent } from './componentes/experiencia/new-experienc
 import { EditExperienciaComponent } from './componentes/experiencia/edit-experiencia/edit-experiencia.component';
 import { NeweducacionComponent } from './componentes/educacion/neweducacion.component';
 import { EditeducacionComponent } from './componentes/educacion/editeducacion.component';
+import { EditSkillComponent } from './componentes/hys/edit-skill.component';
+import { NewSkillComponent } from './componentes/hys/new-skill.component';
+import { HysComponent } from './componentes/hys/hys.component';
+import { EditAcercaDeComponent } from './componentes/acerca-de/edit-acerca-de.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideStorage,getStorage } from '@angular/fire/storage';
 
 @NgModule({
   declarations: [
@@ -30,7 +37,7 @@ import { EditeducacionComponent } from './componentes/educacion/editeducacion.co
     AcercaDeComponent,
     ExperienciaComponent,
     EducacionComponent,
-    HardYSoftSkillsComponent,
+
     ProyectosComponent,
     BannerComponent,
     UsuarioComponent,
@@ -41,13 +48,19 @@ import { EditeducacionComponent } from './componentes/educacion/editeducacion.co
     EditExperienciaComponent,
     NeweducacionComponent,
     EditeducacionComponent,
+    EditSkillComponent,
+    NewSkillComponent,
+    HysComponent,
+    EditAcercaDeComponent,
     ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
-    NgCircleProgressModule.forRoot({})
+    NgCircleProgressModule.forRoot({}),
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideStorage(() => getStorage())
   ],
   providers: [
     interceptProvider

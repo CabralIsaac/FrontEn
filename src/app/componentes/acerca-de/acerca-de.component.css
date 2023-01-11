@@ -1,0 +1,30 @@
+/*.Usuario {
+    width: 280px;
+    height: 280px;
+    position: absolute; top: 580px;
+}*/
+
+@media (min-width: 576px){
+    .Usuario{
+        width: 280px;
+        height: 280px;
+        position: absolute; top: 580px;
+    }
+    .descripcion{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media(max-width: 575px){
+    .Usuario{
+        position: absolute;
+        width: 100px;
+        height: 100px;
+    }
+}
+
+h4{
+    display: inline;
+}

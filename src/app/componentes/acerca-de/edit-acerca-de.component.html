@@ -1,0 +1,38 @@
+<section class="vh-100" style="background-color:rgb(221, 255, 253);">
+    <div class="container" *ngIf="persona">
+        <div class="row">
+            <div>
+                <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                    <div class="form-group">
+                        <label for="nombre"><span class="h5 fw-bold mb-0">Nombre</span></label>
+                        <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="persona.nombre" required>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="apellido"><span class="h5 fw-bold mb-0">Apellido</span></label>
+                        <input type="text" class="form-control" id="apellido" name="apellido" [(ngModel)]="persona.apellido" required>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="form-group">
+                        <label for="descripcion"><span class="h5 fw-bold mb-0">Descripcion</span></label>
+                        <input type="text" class="form-control" id="descripcion" name="descripcion" [(ngModel)]="persona.descripcion" required>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="img"><span class="h5 fw-bold mb-0">Imagen</span></label>
+                        <input type="file" class="form-control" id="img" name="img" [(ngModel)]="persona.img" (change)="uploadImage($event)"
+                        accept=".jpg, .jpge, .png">
+                    </div>
+                    <div class="imagen">
+                        <img [src]="imageServices.url" width="200px">
+                    </div>
+                    <br>
+                    <button class="btn btn-primary">
+                        Editar persona
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    </section>

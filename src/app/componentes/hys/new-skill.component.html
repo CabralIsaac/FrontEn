@@ -1,0 +1,23 @@
+<section class="vh-100" style="background-color:rgb(221, 255, 253);">
+<div class="container">
+    <div class="row">
+        <div>
+            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="nombre"><span class="h5 fw-bold mb-0">Nueva Skill</span></label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="nombre" required>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="porcentaje"><span class="h5 fw-bold mb-0">Porcentaje</span></label>
+                    <input type="text" class="form-control" id="porcentaje" name="porcentaje" [(ngModel)]="porcentaje" required>
+                </div>
+                <br>
+                <button class="btn btn-primary">
+                    Agregar 
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+</section>
