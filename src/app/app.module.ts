@@ -29,15 +29,18 @@ import { EditAcercaDeComponent } from './componentes/acerca-de/edit-acerca-de.co
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideStorage,getStorage } from '@angular/fire/storage';
+import { EditProyectoComponent } from './componentes/proyectos/editproyecto.component';
+import { NewProyectoComponent } from './componentes/proyectos/newproyecto.component';
 
 @NgModule({
   declarations: [
+    NewProyectoComponent,
     AppComponent,
     EncabezadoComponent,
     AcercaDeComponent,
     ExperienciaComponent,
     EducacionComponent,
-
+    EditProyectoComponent,
     ProyectosComponent,
     BannerComponent,
     UsuarioComponent,
