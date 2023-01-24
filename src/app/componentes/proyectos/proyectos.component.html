@@ -1,28 +1,21 @@
 
 <div class="row">
-  <h2><span class="h2 fw-bold mb-0"><u>Proyectos</u></span><button type="button" class="btn btn-link" routerLink="/newproyecto" *ngIf="isLogged"><i class="bi bi-plus-circle-fill"></i></button></h2>
+  <h2><span class="Tipografia"><u>Proyectos</u></span><button type="button" class="btn btn-link" routerLink="/newproyecto" *ngIf="isLogged"><i class="bi bi-plus-circle-fill"></i></button></h2>
+  <br>
   
-  <div class="row" *ngIf="proyectos?.length == 0">
-    <p style="color: rgb(196, 162, 162)">No hay proyectos para mostrar</p>
-  </div>
-
-  <div class="col-lg-2">
-
-  </div>
-  
-  <div class="col lg 1"></div>
-  <div class="col-lg-11">
-  <table class="table">
-      <tbody>
-          <tr *ngFor="let Proyecto of proyectos">
-              <h3 class="card-title">{{ Proyecto.nombreProyecto }}</h3>
-              <p class="card-text">{{ Proyecto.descripcionProyecto }}</p>
-              <a href="{{ Proyecto.linkproyecto }}" target="_blank" class="btn btn-outline-dark">Link del Proyecto<i class="bi bi-box-arrow-up-right"></i></a>
-              <br>
-              <img class="card-img-top img-responsive img-thumbnail" src="{{ Proyecto.imgproyecto }}" alt="Imagen {{ Proyecto.nombreProyecto }}"/>
-              <td *ngIf="isLogged"><button class="btn btn-dark" routerLink="/editproyecto/{{ Proyecto.id }}"><i class="bi bi-pencil-square"></i></button></td>
-              <td *ngIf="isLogged"><button class="btn btn-danger" (click)="delete(Proyecto.id)"><i class="bi bi-trash3"></i></button></td>
-          </tr>
-      </tbody>
-  </table>
+<table class="table">
+    <tbody>
+        <tr *ngFor="let Proyecto of proyectos">
+            <td><h3 class="Tipografia"><b>{{Proyecto.nombreProyecto}}</b></h3></td>
+            <td><h4 class="Tipografia">{{Proyecto.descripcionProyecto}}</h4></td>
+            <td><h4 class="Tipografia">{{Proyecto.linkproyecto}}</h4></td>
+            <td><img class="card-img-top img-responsive img-thumbnail" src="{{ Proyecto.imgproyecto }}" alt="Imagen {{ Proyecto.nombreProyecto }}"/></td>
+            <td *ngIf="isLogged"><button class="btn btn-dark" routerLink="/editproyecto/{{ Proyecto.id }}"><i class="bi bi-pencil-square"></i></button></td>
+                <td *ngIf="isLogged"><button class="btn btn-danger" (click)="delete(Proyecto.id)"><i class="bi bi-trash3"></i></button></td>
+        </tr>
+    </tbody>
+</table>
 </div>
+
+
+

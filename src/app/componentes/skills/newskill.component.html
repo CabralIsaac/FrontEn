@@ -1,0 +1,70 @@
+<section class="vh-100" style="background-image: url(../../../assets/fondo.png);">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col col-xl-10">
+        <div class="card" style="border-radius: 1rem;">
+          <div class="row g-0">
+            <div class="col-md-12 col-lg-12 d-flex align-items-center">
+              <div class="card-body p-4 p-lg-5 text-black">
+
+                <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                      
+                      <div class="form-group">
+                          <label for="nombreSkill"><span class="Tipografia"><h5><b>Nombre de la Skill</b></h5></span></label>
+                          <input type="text" class="form-control" id="nombreSkill" name="nombreSkill" [(ngModel)]="nombreSkill"/>
+                      </div>
+
+                      <br>
+
+                      <div class="form-group">
+                          <label for="imgsrc"><span class="Tipografia"><h5><b>Link directo de la imagen</b></h5></span></label>
+                          <input type="text" class="form-control" id="imgsrc" name="imgsrc" [(ngModel)]="imgsrc" />
+                      </div>
+
+                      <br>
+
+                      <div class="form-group">
+                        <label for="colorInterno"><span class="Tipografia"><h5><b>Color interno</b></h5></span></label>
+                        <input type="color" class="form-control" name="colorInterno" id="colorInterno" [(ngModel)]="colorInterno" />
+                       </div>
+
+                       <br>
+
+                       <div class="form-group">
+                         <label for="colorExterno"><span class="Tipografia"><h5><b>Color de la barra</b></h5></span></label>
+                         <input type="color" class="form-control" name="colorExterno" id="colorExterno" [(ngModel)]="colorExterno" />
+                       </div>
+
+                       <br>
+
+                       <div class="form-group">
+                        <label for="porcentaje"><span class="Tipografia"><h5><b>Porcentaje</b></h5></span></label>
+                        <input type="number" class="form-control" min="0" max="100" id="porcentaje" name="porcentaje" [(ngModel)]="porcentaje"/>
+                       </div>
+
+                       <br>
+
+                       <button class="btn btn-dark">
+                        <span class="Tipografia">Agregar Skill</span>
+                    </button>
+
+                  </form>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+

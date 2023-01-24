@@ -1,11 +1,10 @@
 .row{
     padding: 40px;
+    background-image: url(../../../assets/fondo2.png);
 }
 
 h1, h3{
     display: inline;
 }
-div{
-    background-color:rgb(221, 255, 253);
-}
+
 

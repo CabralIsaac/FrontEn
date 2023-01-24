@@ -1,6 +1,6 @@
 
 <div class="row">
-    <h2><span class="h2 fw-bold mb-0"><u>Educación</u></span><button type="button" class="btn btn-link" routerLink="/nuevaedu" *ngIf="isLogged"><i class="bi bi-plus-circle-fill"></i></button></h2>
+    <h2><span class="Tipografia"><u>Educación</u></span><button type="button" class="btn btn-link" routerLink="/nuevaedu" *ngIf="isLogged"><i class="bi bi-plus-circle-fill"></i></button></h2>
     
     <div class="col-lg-2">
 
@@ -11,12 +11,11 @@
     <table class="table">
         <tbody>
             <tr *ngFor="let Educacion of educacion">
-                <td><h5 class="fw-normal mb-3 pb-3">{{Educacion.nombreE}}</h5></td>
-                <td>{{Educacion.descripcionE}}</td>
+                <td><h3 class="Tipografia"><b>{{Educacion.nombreE}}</b></h3></td>
+                <td><h4 class="Tipografia">{{Educacion.descripcionE}}</h4></td>
                 <td *ngIf="isLogged"><button class="btn btn-dark" routerLink="/editedu/{{Educacion.id}}"><i class="bi bi-pencil-square"></i></button></td>
                 <td *ngIf="isLogged"><button class="btn btn-danger" (click)="delete(Educacion.id)"><i class="bi bi-trash3"></i></button></td>
             </tr>
         </tbody>
     </table>
 </div>
-

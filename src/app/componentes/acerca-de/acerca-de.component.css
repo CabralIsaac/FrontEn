@@ -1,30 +1,24 @@
-/*.Usuario {
-    width: 280px;
-    height: 280px;
-    position: absolute; top: 580px;
-}*/
 
-@media (min-width: 576px){
-    .Usuario{
-        width: 280px;
-        height: 280px;
-        position: absolute; top: 580px;
-    }
-    .descripcion{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-}
 
-@media(max-width: 575px){
-    .Usuario{
-        position: absolute;
-        width: 100px;
-        height: 100px;
-    }
+.row{
+    align-items: center;
+    background-image: url(../../../assets/fondodeacercade9.png);
 }
 
 h4{
     display: inline;
+}
+
+@media screen and (max-width: 600px) { 
+    .img-fluid{
+        width: 100px;
+        height: 100px;
+    }
+    .row{
+        height: 10%;
+        width: 10%;
+    }
+
+
+
 }

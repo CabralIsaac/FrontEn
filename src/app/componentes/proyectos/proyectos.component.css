@@ -2,9 +2,6 @@
     padding: 40px;
 }
 
-h1, h3{
-    display: inline;
-}
-div{
-    background-color:rgb(221, 255, 253);
+.row{
+    background-image: url(../../../assets/fondo2.png);
 }

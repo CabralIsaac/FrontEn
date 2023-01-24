@@ -25,30 +25,8 @@ export class NewProyectoComponent implements OnInit {
       this.imgproyecto,
       this.linkproyecto
     );
-
-    (function () {
-      'use strict';
-
-      var forms = document.querySelectorAll('.needs-validation');
-
-      Array.prototype.slice.call(forms).forEach(function (form) {
-        form.addEventListener(
-          'submit',
-          function (event: any): void {
-            if (!form.checkValidity()) {
-              event.preventDefault();
-              event.stopPropagation();
-            }
-
-            form.classList.add('was-validated');
-          },
-          false
-        );
-      });
-    })();
-
+    
     this.proyService.save(proyecto).subscribe((response) => {
-      alert('Proyecto añadido');
       this.proyService.lista();
       this.router.navigate(['']);
     });

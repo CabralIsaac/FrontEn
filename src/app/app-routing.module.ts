@@ -6,24 +6,25 @@ import { NeweducacionComponent } from './componentes/educacion/neweducacion.comp
 import { EditExperienciaComponent } from './componentes/experiencia/edit-experiencia/edit-experiencia.component';
 import { NewExperienciaComponent } from './componentes/experiencia/new-experiencia/new-experiencia.component';
 import { HomeComponent } from './componentes/home/home.component';
-import { EditSkillComponent } from './componentes/hys/edit-skill.component';
-import { NewSkillComponent } from './componentes/hys/new-skill.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { EditProyectoComponent } from './componentes/proyectos/editproyecto.component';
 import { NewProyectoComponent } from './componentes/proyectos/newproyecto.component';
+import { EditSkillComponent } from './componentes/skills/editskill.component';
+import { NewSkillComponent } from './componentes/skills/newskill.component';
+
 
 const routes: Routes = [
-  {path:'', component: HomeComponent},
-  {path:'login', component: LoginComponent},
+  {path: '', component: HomeComponent},
+  {path: 'login', component: LoginComponent},
   {path: 'nuevaexp', component: NewExperienciaComponent},
   {path: 'editexp/:id', component: EditExperienciaComponent},
   {path: 'nuevaedu', component: NeweducacionComponent},
   {path: 'editedu/:id', component: EditeducacionComponent},
-  {path: 'newskill', component: NewSkillComponent},
-  {path: 'editskill/:id', component: EditSkillComponent},
   {path: 'editacercade/:id', component: EditAcercaDeComponent},
   {path: 'editproyecto/:id', component: EditProyectoComponent },
-  {path: 'newproyecto', component: NewProyectoComponent }
+  {path: 'newproyecto', component: NewProyectoComponent },
+  {path: 'newskill', component: NewSkillComponent },
+  {path: 'editskill/:id', component: EditSkillComponent }
 ];
 
 @NgModule({

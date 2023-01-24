@@ -1,0 +1,14 @@
+
+.row{ 
+    padding: 40px;
+}
+.rowed{
+    background-image: url(../../../assets/fondo2.png);
+
+}
+.circulo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+

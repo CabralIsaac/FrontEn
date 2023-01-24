@@ -5,6 +5,8 @@ export class Proyecto {
     imgproyecto: string;
     linkproyecto: string;
   
+
+    
     constructor(
       nombreProyecto: string,
       descripcionProyecto: string,

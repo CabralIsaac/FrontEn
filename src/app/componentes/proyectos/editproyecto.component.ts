@@ -10,7 +10,6 @@ import { ProyectoService } from "src/app/service/proyecto.service";
 })
 export class EditProyectoComponent implements OnInit {
   proyecto: Proyecto = null;
-
   constructor(
     private proyService: ProyectoService,
     private router: Router,
@@ -24,31 +23,9 @@ export class EditProyectoComponent implements OnInit {
     });
   }
   onUpdate(): void {
-    (function () {
-      'use strict';
-
-      var forms = document.querySelectorAll('.needs-validation');
-
-      Array.prototype.slice.call(forms).forEach(function (form) {
-        form.addEventListener(
-          'submit',
-          function (event: any): void {
-            if (!form.checkValidity()) {
-              event.preventDefault();
-              event.stopPropagation();
-            }
-
-            form.classList.add('was-validated');
-          },
-          false
-        );
-      });
-    })();
-
     const id: number = this.activatedRouter.snapshot.params['id'];
     this.proyService.update(id, this.proyecto).subscribe((data) => {
       this.proyService = data;
-      alert('Proyecto Modificado');
       this.router.navigate(['']);
     });
   }
