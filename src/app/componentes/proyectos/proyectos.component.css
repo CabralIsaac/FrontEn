@@ -5,3 +5,10 @@
 .row{
     background-image: url(../../../assets/fondo2.png);
 }
+
+h1{
+    text-align: center;
+}
+img{
+    max-width: 800px;
+}

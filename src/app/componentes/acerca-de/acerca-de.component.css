@@ -2,23 +2,9 @@
 
 .row{
     align-items: center;
-    background-image: url(../../../assets/fondodeacercade9.png);
+    background-image: url(../../../assets/fondo2.png);
 }
 
 h4{
     display: inline;
-}
-
-@media screen and (max-width: 600px) { 
-    .img-fluid{
-        width: 100px;
-        height: 100px;
-    }
-    .row{
-        height: 10%;
-        width: 10%;
-    }
-
-
-
 }

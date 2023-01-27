@@ -1,3 +1,22 @@
 .row{
     align-items: center;
 }
+.Instagram{
+    width: 40px;
+    height: 40px;
+}
+.Twt{
+    width: 42px;
+    height: 42px;
+}
+.Face{
+    width: 40px;
+    height: 40px;
+}
+
+
+@media (min-width: 1500px){
+    #Red{
+        padding-left: 80px;
+}
+}
